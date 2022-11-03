@@ -75,10 +75,12 @@ export default function Counter() {
         Number {count} is {count % 2 === 0 ? 'even' : 'odd' }{/* STEP 3 */}
       </div>
       <div>
-        <button id='increment' onClick={increment}>Increment</button>
-        <button id='decrement' onClick={decrement}>Decrement</button>
-        <button id='resetCount' onClick={reset}>Reset</button>
+        <button id='increment' onClick={increment => {setCount(count + 1)}}>Increment</button> {/*STEP 4*/}
+        <button id='decrement' onClick={decrement => {setCount(count - 1)}}>Decrement</button> {/*STEP 5*/}
+        <button id='resetCount' onClick={reset => {setCount(!count)}}>Reset</button> {/*STEP 6*/}
       </div>
     </div>
   );
 }
+
+
